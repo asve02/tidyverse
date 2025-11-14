@@ -1,0 +1,26 @@
+---
+title: "usingtidyverse"
+author: "Ashish Verma"
+format: html
+editor: visual
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+# Load tidyverse
+library(tidyverse)
+
+# Example dataset
+data <- tibble(
+  name = c("Anna", "Bjorn", "Carla", "David"),
+  age = c(23, 30, 28, 35),
+  city = c("Stockholm", "Umeå", "Gothenburg", "Lund")
+)
+
+# Filter and summarize
+data |>
+  filter(age > 25) |>
+  summarise(mean_age = mean(age))
+```
